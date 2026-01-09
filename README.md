@@ -34,6 +34,72 @@ Input Image
 
 ---
 
+##  Model Details
+
+- **Model**: YOLOv8s (Ultralytics)  
+- **Task**: Text Watermark Detection  
+- **Dataset**: Custom watermark image dataset  
+- **Image Size**: 640 × 640  
+- **Epochs**: 100  
+
+*Trained model weights (`best.pt`) are not included due to GitHub’s 100 MB file size limit.*
+
+---
+
+##  Project Structure
+
+```text
+TriadBinarize-Defender/
+│
+├── app.py # Streamlit application
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+├── .gitignore # Ignored files & folders
+│
+├── models/
+│ └── best.pt # Trained YOLOv8 model (not included)
+│
+├── training/
+│ └── training_commands.txt # Training & validation commands
+│
+└── outputs/ # Generated outputs (ignored via .gitignore)
+
+---
+
+
+---
+
+##  Installation & Usage
+
+### 1️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+
+2️⃣ Run the Application
+streamlit run app.py
+
+Training Commands (Summary)
+Training
+
+yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
+
+**Validation**
+yolo task=detect mode=val model=best.pt data=data.yaml
+
+**Results & Observations**
+
+- YOLOv8 accurately localizes watermark text even in complex backgrounds
+
+- rembg significantly improves text clarity before binarization
+
+- OTSU provides fast global thresholding
+
+- Wavelet Transform preserves fine stroke details better than OTSU
+
+- Final outputs closely match classical watermark binarization results (2023 standard)
+---
+
+
 ##  **Graphical User Interface (GUI)**
 
 The project is implemented as an **interactive Streamlit web application** that allows users to:
@@ -58,68 +124,57 @@ The project is implemented as an **interactive Streamlit web application** that 
 >  *Output quality may vary depending on watermark transparency, font thickness, and background complexity.*
 
 ---
+**Technologies Used**
 
-##  **Project Structure**
+- Python
 
-```text
-TriadBinarize-Defender/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── models/
-│   └── best.pt   (not included due to size limit)
-│
-├── training/
-│   └── training_commands.txt
-│
-└── outputs/   (ignored via .gitignore)
+- YOLOv8 (Ultralytics)
 
-##  **Installation & Usage**
+- OpenCV
 
-pip install -r requirements.txt
-streamlit run app.py
+- rembg
 
-Model Training (Summary)
+- PyWavelets
 
-Model: YOLOv8s (Ultralytics)
+- Streamlit
 
-Dataset: Custom watermark image dataset
-
-Training performed using YOLOv8 detection pipeline
-
-Final trained weights: best.pt
-
- Due to GitHub file size limits, trained model weights are not included in this repository.
-
- Pretrained Model Download
-
-Download the trained YOLOv8 model from the link below and place it inside the models/ folder:
-
-models/best.pt
-
-
-## Project Status
-
-This project is a research and academic prototype.
-
-Designed to demonstrate pipeline integration
-
-Not intended for production deployment
-
-Suitable for major projects, internships, and research demos
-
-## Author
-
-Bhoomi Gupta
-MCA (AI/ML)
-Major Project – Image Processing & Deep Learning
-
-## License
-
-This project is shared for educational and research purposes only.
-
+- NumPy
 
 ---
+
+**Use Cases** 
+
+- Digital watermark analysis
+
+- Copyright & ownership verification
+
+- Image forensics
+
+- Document security research
+
+- Academic and research demonstrations
+
+---
+
+**Author**
+
+Bhoomi Gupta
+MCA (AI/ML) Student
+Email: bhoomigupta603@gmail.com
+
+GitHub: https://github.com/Bhoomigupta603
+---
+
+**Acknowledgements**
+
+- Ultralytics YOLOv8
+
+- OpenCV Community
+
+- rembg Contributors
+
+- PyWavelets Library
+
+⭐ If you find this project useful, feel free to star the repository!
+
+
