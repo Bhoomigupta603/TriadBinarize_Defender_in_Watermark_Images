@@ -72,12 +72,15 @@ TriadBinarize-Defender/
 ### 1️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 2️⃣ Run the Application
 streamlit run app.py
 
-Training Commands (Summary)
-Training
+---
+
+**Training Commands (Summary)**
+**Training**
 
 yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
 
@@ -157,8 +160,7 @@ The project is implemented as an **interactive Streamlit web application** that 
 **Author**
 
 Bhoomi Gupta
-MCA (AI/ML) Student
-Email: bhoomigupta603@gmail.com
+Email: bhoomi290802@gmail.com
 
 GitHub: https://github.com/Bhoomigupta603
 ---
@@ -174,6 +176,7 @@ GitHub: https://github.com/Bhoomigupta603
 - PyWavelets Library
 
 ⭐ If you find this project useful, feel free to star the repository!
+
 
 
 
