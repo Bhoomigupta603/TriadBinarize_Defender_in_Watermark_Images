@@ -74,20 +74,20 @@ TriadBinarize-Defender/
 pip install -r requirements.txt
 ```
 
-2️⃣ Run the Application
+### 2️⃣ Run the Application
 streamlit run app.py
 
 ---
 
-**Training Commands (Summary)**
-**Training**
+## Training Commands (Summary)
+### Training
 
 yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
 
-**Validation**
+### Validation
 yolo task=detect mode=val model=best.pt data=data.yaml
 
-**Results & Observations**
+### Results & Observations
 
 - YOLOv8 accurately localizes watermark text even in complex backgrounds
 
@@ -159,10 +159,10 @@ The project is implemented as an **interactive Streamlit web application** that 
 
 **Author**
 
-Bhoomi Gupta
-Email: bhoomi290802@gmail.com
+- Bhoomi Gupta
+- Email: guptabhoomi577@gmail.com
 
-GitHub: https://github.com/Bhoomigupta603
+#### GitHub: https://github.com/Bhoomigupta603
 ---
 
 **Acknowledgements**
@@ -176,6 +176,7 @@ GitHub: https://github.com/Bhoomigupta603
 - PyWavelets Library
 
 ⭐ If you find this project useful, feel free to star the repository!
+
 
 
 
