@@ -63,9 +63,7 @@ TriadBinarize-Defender/
 │ └── training_commands.txt # Training & validation commands
 │
 └── outputs/ # Generated outputs (ignored via .gitignore)
-
----
-
+```
 
 ---
 
@@ -176,5 +174,6 @@ GitHub: https://github.com/Bhoomigupta603
 - PyWavelets Library
 
 ⭐ If you find this project useful, feel free to star the repository!
+
 
 
