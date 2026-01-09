@@ -1,0 +1,12 @@
+YOLOv8 Watermark Detection Training
+
+Model: yolov8s.pt
+Dataset: Custom watermark dataset (Roboflow)
+Epochs: 100
+Image Size: 640
+
+Command:
+yolo task=detect mode=train model=yolov8s.pt data=data.yaml epochs=100 imgsz=640
+
+Validation:
+yolo task=detect mode=val model=best.pt data=data.yaml

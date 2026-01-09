@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+models/*.pt
+
+
+# Streamlit
+.streamlit/
+
+# Outputs
+outputs/
+uploads/
+runs/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+.env
